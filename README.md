@@ -2,7 +2,7 @@
 
 **RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice or video calling peer to peer or conference in modern apps.
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/vgep2fb.gif)](https://youtu.be/-sweQ2HzjrA)
+[![RNVideoVoiceCall demo]()](https://youtu.be/-sweQ2HzjrA)
 
 **Note:**
 
