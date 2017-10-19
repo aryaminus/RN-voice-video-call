@@ -20,14 +20,15 @@ We will be using HTTPAPI of Voximplant.
 1. Arch Linux with VS-Code, thus support focused on Android App
 2. Extensions: <a href="https://marketplace.visualstudio.com/items?itemName=vsmobile.vscode-react-native" target="_blank">React Native Tools</a> , <a href="https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux" target="_blank">React-Native Snippets</a> , <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a>
 3. Device run instead of SDK-build using <a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm" target="_blank">Vysor</a>
-4. Remove/Add Comment of the required system in Register.js : Create new Application and fetch application_id and assign user to it or assign user to all applications. **Default** is assign all
+4. Remove/Add Comment of the required system in Register.js : Create new Application and fetch application_id and assign user to it or assign user to all applications. **Default** is assign all where you may once create and fetch app_id and then put the app_id in place of all. Refer to Video Session
 
 ## Installation
 
 Clone the source locally:
 ```
-$ git clone https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
+$ git clone https://github.com/aryaminus/RN-voice-video-call/
 $ cd RN-voice-video-call
+$ git checkout HttpApiSetup
 ```
 
 **Start the application in development mode**
