@@ -8,18 +8,32 @@ import {
   TextInput,
   StyleSheet, // CSS-like styles
   Text, // Renders text
-  View // Container component
+  View, // Container component
+  DeviceEventEmitter
 } from "react-native";
 
 import { StackNavigator } from "react-navigation";
-//import Spinner from "react-native-loading-spinner-overlay";
+import Spinner from "react-native-loading-spinner-overlay";
+
+DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
+  console.log("Connection successful");
+});
+
+DeviceEventEmitter.addListener("LoginSuccessful", obj => {
+  console.log("Login successful ");
+});
+
+DeviceEventEmitter.addListener("LoginFailed", code => {
+  console.log("Login failed");
+});
 
 export default class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      loading: false
     };
   }
   static navigationOptions = {
@@ -29,12 +43,36 @@ export default class Login extends Component {
     },
     header: null
   };
+
+  componentDidMount() {
+    VoxImplant.SDK.connect();
+  }
+
   async onLoginPress() {
+    this.setState({loading: true });
     const { email, password } = this.state;
     console.log(email);
     console.log(password);
     await AsyncStorage.setItem("email", email);
     await AsyncStorage.setItem("password", password);
+    const accnameValue = "testing";
+    const appnameValue = "testing";
+    const usernameValue = email.replace(/@[^@]+$/, ""); //extract username from email
+    console.log(usernameValue);
+    const passwordValue = password;
+
+    VoxImplant.SDK.login(
+      usernameValue +
+        "@" +
+        appnameValue +
+        "." +
+        accnameValue +
+        ".voximplant.com",
+      passwordValue
+    );
+
+    console.log("SDK Login done");
+
     this.props.navigation.navigate("Boiler");
   }
   render() {
@@ -93,6 +131,7 @@ export default class Login extends Component {
             Forget Password
           </Text>
         </TouchableOpacity>
+        <Spinner visible={this.state.loading} />
       </View>
     );
   }
