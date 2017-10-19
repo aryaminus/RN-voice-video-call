@@ -8,10 +8,25 @@ import {
   TouchableHighlight,
   Image,
   KeyboardAvoidingView,
-  AsyncStorage
+  AsyncStorage,
+  DeviceEventEmitter
 } from "react-native";
 
 import { StackNavigator } from "react-navigation";
+import VoxImplant from "react-native-voximplant";
+import Spinner from "react-native-loading-spinner-overlay";
+
+DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
+  console.log("Connection successful");
+});
+
+DeviceEventEmitter.addListener("LoginSuccessful", () => {
+  console.log("Login successful ");
+});
+
+DeviceEventEmitter.addListener("LoginFailed", () => {
+  console.log("Login failed");
+});
 
 export default class Register extends Component {
   constructor(props) {
@@ -20,7 +35,8 @@ export default class Register extends Component {
       email: "",
       name: "",
       password: "",
-      password_confirmation: ""
+      password_confirmation: "",
+      loading: false
     };
   }
 
@@ -31,14 +47,105 @@ export default class Register extends Component {
     }
   };
 
+  componentDidMount() {
+    VoxImplant.SDK.connect();
+  }
+
   async onRegisterPress() {
+    this.setState({ loading: true });
     const { email, password, name } = this.state;
     console.log(email);
     console.log(name);
     console.log(password);
+
+    //save input values
     await AsyncStorage.setItem("email", email);
     await AsyncStorage.setItem("name", name);
     await AsyncStorage.setItem("password", password);
+
+    //enter main account credentials
+    const Vemail = "testing@testing.com";
+    const Vpassword = "testing123";
+
+    //fetch response from voximplantto get API key and Account ID
+    const responseM = await fetch(
+      "https://api.voximplant.com/platform_api/Logon/?account_email=" +
+        Vemail +
+        "&account_password=" +
+        Vpassword
+    );
+    const jsonM = await responseM.json();
+    const api_key = jsonM.api_key;
+    const account_id = JSON.stringify(jsonM.account_id);
+    await AsyncStorage.setItem("API", api_key);
+    await AsyncStorage.setItem("ACC_ID", account_id);
+    console.log(api_key);
+    console.log(account_id);
+
+    //fetch response from voximplant with account and app id  to get application id
+    //use once only for single application or for different applications
+    const appname = "humdum";
+    const responseA = await fetch(
+      "https://api.voximplant.com/platform_api/AddApplication/?account_id=" +
+        account_id +
+        "&api_key=" +
+        api_key +
+        "&application_name="+appname
+    );
+    const jsonA = await responseA.json();
+    const application_id = JSON.stringify(jsonA.application_id);
+    await AsyncStorage.setItem("@Humdum:application_id", application_id);
+    console.log("Application id:" + application_id);
+
+    const usernameValue = email.replace(/@[^@]+$/, ""); // get username from email
+    
+    //fetch response from voximplant to get the user id of the enter email and password
+    const response = await fetch(
+      "https://api.voximplant.com/platform_api/AddUser/?account_id=" +
+        account_id +
+        "&api_key=" +
+        api_key +
+        "&user_name=" +
+        usernameValue +
+        "&user_display_name=" +
+        name +
+        "&user_password=" +
+        password
+    );
+    const json = await response.json();
+    const user_id = JSON.stringify(json.user_id);
+    await AsyncStorage.setItem("user_id", user_id);
+
+    //get response from voximplant to add the user to application for calling within the app's users
+    const responseB = await fetch(
+      "https://api.voximplant.com/platform_api/BindUser/?account_id=" +
+        account_id +
+        "&api_key=" +
+        api_key +
+        "&user_id=" +
+        user_id +
+        "&application_id="+ application_id
+    );
+    const jsonB = await responseB.json();
+    const result = JSON.stringify(jsonB.result);
+    console.log(result);
+
+    const accnameValue = "testing";
+    const appnameValue = "testing";
+    const passwordValue = password;
+
+    //login the user to get deviceeventemitter
+    VoxImplant.SDK.login(
+      usernameValue +
+        "@" +
+        appnameValue +
+        "." +
+        accnameValue +
+        ".voximplant.com",
+      passwordValue
+    );
+
+    this.setState({ loading: false });
     this.props.navigation.navigate("Boiler");
   }
 
@@ -86,7 +193,8 @@ export default class Register extends Component {
           />
           <TextInput
             value={this.state.password}
-            onChangeText={password_confirmation => this.setState({ password_confirmation })}
+            onChangeText={password_confirmation =>
+              this.setState({ password_confirmation })}
             style={styles.input}
             placeholder="Confirm Password"
             secureTextEntry={true}

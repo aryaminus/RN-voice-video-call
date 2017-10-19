@@ -14,6 +14,7 @@ import {
 
 import { StackNavigator } from "react-navigation";
 import Spinner from "react-native-loading-spinner-overlay";
+import VoxImplant from "react-native-voximplant";
 
 DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
@@ -72,7 +73,7 @@ export default class Login extends Component {
     );
 
     console.log("SDK Login done");
-
+    this.setState({loading: false });
     this.props.navigation.navigate("Boiler");
   }
   render() {
