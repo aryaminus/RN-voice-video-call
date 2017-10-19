@@ -16,7 +16,7 @@ import { StackNavigator } from "react-navigation";
 import VoxImplant from "react-native-voximplant";
 import Spinner from "react-native-loading-spinner-overlay";
 
-DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
+/*DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
 });
 
@@ -26,7 +26,7 @@ DeviceEventEmitter.addListener("LoginSuccessful", () => {
 
 DeviceEventEmitter.addListener("LoginFailed", () => {
   console.log("Login failed");
-});
+});*/
 
 export default class Register extends Component {
   constructor(props) {
