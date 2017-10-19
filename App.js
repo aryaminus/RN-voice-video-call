@@ -4,14 +4,16 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Platform,
   StyleSheet,
   Text,
   View,
-  StatusBar
-} from 'react-native';
+  StatusBar,
+  AsyncStorage,
+  DeviceEventEmitter
+} from "react-native";
 
 import Login from "./app/components/Login";
 import Boiler from "./app/components/Boiler";
@@ -19,6 +21,7 @@ import ForgetPassword from "./app/components/ForgetPassword";
 import Register from "./app/components/Register";
 
 import { StackNavigator } from "react-navigation";
+import VoxImplant from "react-native-voximplant";
 
 /*const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -27,7 +30,33 @@ import { StackNavigator } from "react-navigation";
     'Shake or press menu button for dev menu',
 });*/
 
+DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
+  console.log("Connection successful");
+  this.setState({ page: "login" });
+});
+
+DeviceEventEmitter.addListener("LoginSuccessful", () => {
+  console.log("Login successful ");
+});
+
+DeviceEventEmitter.addListener("LoginFailed", () => {
+  console.log("Login failed");
+});
+
 class Home extends Component<{}> {
+  constructor() {
+    super();
+    VoxImplant.SDK.closeConnection();
+    this.state = {
+      loading: true,
+      emailA: ""
+    };
+  }
+
+  componentDidMount() {
+    VoxImplant.SDK.connect();
+  }
+
   static navigationOptions = {
     headerStyle: {
       backgroundColor: "#16a085",
@@ -35,17 +64,48 @@ class Home extends Component<{}> {
     },
     header: null
   };
-  render() {
-    return (
-      <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#16a085" />
-        <Login navigation={this.props.navigation} />
-      </View>
+
+  async checkuser() {
+    const emailB = await AsyncStorage.getItem("email");
+    this.setState({ emailA: emailB });
+  }
+
+  async VoxImplant() {
+    const accnameValue = "testing";
+    const appnameValue = "testing";
+    const email = await AsyncStorage.getItem("email");
+    const usernameValue = email.replace(/@[^@]+$/, "");
+    const passwordValue = await AsyncStorage.getItem("password");
+    console.log(email);
+    console.log(passwordValue);
+    VoxImplant.SDK.login(
+      usernameValue +
+        "@" +
+        appnameValue +
+        "." +
+        accnameValue +
+        ".voximplant.com",
+      passwordValue
     );
+    console.log("SDK Login done");
+  }
+
+  render() {
+    this.checkuser();
+    if (this.state.emailA === "") {
+      return (
+        <View style={styles.container}>
+          <StatusBar barStyle="light-content" backgroundColor="#16a085" />
+          <Login navigation={this.props.navigation} />
+        </View>
+      );
+    }
+    this.VoxImplant();
+    return <Boiler navigation={this.props.navigation} />;
   }
 }
 
-export default App = StackNavigator({
+export default (App = StackNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
@@ -76,7 +136,7 @@ export default App = StackNavigator({
       title: "Boiler"
     }
   }
-});
+}));
 
 const styles = StyleSheet.create({
   container: {

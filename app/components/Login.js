@@ -20,11 +20,11 @@ DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
 });
 
-DeviceEventEmitter.addListener("LoginSuccessful", obj => {
+DeviceEventEmitter.addListener("LoginSuccessful", () => {
   console.log("Login successful ");
 });
 
-DeviceEventEmitter.addListener("LoginFailed", code => {
+DeviceEventEmitter.addListener("LoginFailed", () => {
   console.log("Login failed");
 });
 

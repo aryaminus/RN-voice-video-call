@@ -99,7 +99,7 @@ export default class Register extends Component {
 
     const usernameValue = email.replace(/@[^@]+$/, ""); // get username from email
     
-    //fetch response from voximplant to get the user id of the enter email and password
+    //fetch response from voximplant to get the create user & user id of the enter email and password
     const response = await fetch(
       "https://api.voximplant.com/platform_api/AddUser/?account_id=" +
         account_id +
@@ -210,6 +210,7 @@ export default class Register extends Component {
         >
           <Text style={styles.buttonText}>Register</Text>
         </TouchableHighlight>
+        <Spinner visible={this.state.loading} />
       </View>
     );
   }
