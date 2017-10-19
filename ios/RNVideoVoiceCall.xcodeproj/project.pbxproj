@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -37,6 +36,11 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		7881386CFA68439CA035654E /* libVoxImplant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 276F01C03D2E4B66B268687E /* libVoxImplant.a */; };
+		FF2DC872449C4FEBBC520F4F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 956B928AC11B4488833811F9 /* libc++.tbd */; };
+		9C672B1126ED4C578907E5FC /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5423013AB2CF44C2A5B17F20 /* VideoToolbox.framework */; };
+		5F9C96607ABC49A7B43D13FE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3506402068A54F038F7D55B2 /* GLKit.framework */; };
+		736F9B02468242DD887DEB14 /* libVoxImplantSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A600D42E844526B650F287 /* libVoxImplantSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +268,12 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		8A2784C41C564650A44F7EA6 /* VoxImplant.xcodeproj */ = {isa = PBXFileReference; name = "VoxImplant.xcodeproj"; path = "../node_modules/react-native-voximplant/ios/VoxImplant.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		276F01C03D2E4B66B268687E /* libVoxImplant.a */ = {isa = PBXFileReference; name = "libVoxImplant.a"; path = "libVoxImplant.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		956B928AC11B4488833811F9 /* libc++.tbd */ = {isa = PBXFileReference; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		5423013AB2CF44C2A5B17F20 /* VideoToolbox.framework */ = {isa = PBXFileReference; name = "VideoToolbox.framework"; path = "System/Library/Frameworks/VideoToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		3506402068A54F038F7D55B2 /* GLKit.framework */ = {isa = PBXFileReference; name = "GLKit.framework"; path = "System/Library/Frameworks/GLKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A1A600D42E844526B650F287 /* libVoxImplantSDK.a */ = {isa = PBXFileReference; name = "libVoxImplantSDK.a"; path = "/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib/libVoxImplantSDK.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +302,11 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				7881386CFA68439CA035654E /* libVoxImplant.a in Frameworks */,
+				FF2DC872449C4FEBBC520F4F /* libc++.tbd in Frameworks */,
+				9C672B1126ED4C578907E5FC /* VideoToolbox.framework in Frameworks */,
+				5F9C96607ABC49A7B43D13FE /* GLKit.framework in Frameworks */,
+				736F9B02468242DD887DEB14 /* libVoxImplantSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +475,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				8A2784C41C564650A44F7EA6 /* VoxImplant.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -480,6 +496,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNVideoVoiceCallTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				6FE131146EEE4921B8002CE4 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -503,6 +520,17 @@
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6FE131146EEE4921B8002CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				956B928AC11B4488833811F9 /* libc++.tbd */,
+				5423013AB2CF44C2A5B17F20 /* VideoToolbox.framework */,
+				3506402068A54F038F7D55B2 /* GLKit.framework */,
+			);
+			name = Frameworks;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,7 +614,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -1005,6 +1033,15 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNVideoVoiceCall.app/RNVideoVoiceCall";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1022,6 +1059,15 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNVideoVoiceCall.app/RNVideoVoiceCall";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
 			};
 			name = Release;
 		};
@@ -1038,8 +1084,16 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = RNVideoVoiceCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1055,8 +1109,16 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = RNVideoVoiceCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
 			};
 			name = Release;
 		};
@@ -1083,6 +1145,15 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1109,6 +1180,15 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-voximplant/ios/**",
+				);
 			};
 			name = Release;
 		};
@@ -1130,6 +1210,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNVideoVoiceCall-tvOS.app/RNVideoVoiceCall-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1151,6 +1236,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNVideoVoiceCall-tvOS.app/RNVideoVoiceCall-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"/home/aryaminus/Projects/React-Youtube/RNVideoVoiceCall/node_modules/react-native-voximplant/ios/VoxImplantSDK/lib\"",
+				);
 			};
 			name = Release;
 		};
