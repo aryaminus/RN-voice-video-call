@@ -1,8 +1,19 @@
 # RNVideoVoiceCall
 
-**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice or video calling peer to peer or conference in modern apps.
+**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice or video calling peer to peer or conference in modern apps using Voximplant.
 
-[![RNVideoVoiceCall demo]()](https://youtu.be/-sweQ2HzjrA)
+In this branch, we will be focusing on The Backend part using fetching of response and taking the json elements where we will setup Voximplant to login with the main user account, create a child user or login with the already assigned user , assign the user to certain new or previous application and enter the view.
+
+**Note:**
+
+1. The response's JSON maybe required to be stringified, so make usre you use it when formatting
+2. As the react-native-voximplant package sends responses as the state of the account is changed, we use DeviceEventEmitter for listening and changing certain variables
+
+Next, we store the login values or the new user create values locally using Async Storage and then use it next time the user opens the app so that s/he does not have to login each time the app is opened.
+
+We will be using HTTPAPI of Voximplant.
+
+[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://youtu.be/-sweQ2HzjrA)
 
 **Note:**
 
@@ -35,17 +46,15 @@ then press F1 or Fn+F1 and React Native:Run Android on Device
 Follow Code.txt and <a href="https://youtu.be/-sweQ2HzjrA" target="_blank">Youtube</a>
 
 ## Packages:
-<a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
+1. <a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
+2. <a href="https://github.com/voximplant/react-native-voximplant" target="_blank">react-native-voximplant</a>
+3. <a href="https://github.com/joinspontaneous/react-native-loading-spinner-overlay" target="_blank">react-native-loading-spinner-overlay</a>
+
 
 ### Installation
-Follow Code.txt and Working.png
+Follow Code.txt and Manual.md and Working.png
 
-**Major Properties:**
- - To hide navabr in certain component & back option in final screen
- - To using different properties of TextInput and moving cursor from 1 field to other with returnkeytype and hiding password using secureTextEntry
- - To store the input fields locally using Asyncstorage (server integration in next sessions)
-
-![Working demo](https://i.imgur.com/UuMpvwT.png)
+![Working demo](https://i.imgur.com/Xmp5bJi.png)
 
 ## Contributing
 

@@ -4,11 +4,15 @@ npm install
 
 Package:
 https://reactnavigation.org/docs/intro/
-
+https://github.com/voximplant/react-native-voximplant
+https://github.com/joinspontaneous/react-native-loading-spinner-overlay
 
 npm install --save react-navigation
+npm install --save react-native-loading-spinner-overlay@latest
+npm install react-native-voximplant@latest --save
+react-native link
 
-Usage:
+Usage Stack Navigator:
 import { StackNavigator } from "react-navigation";
 
 and
@@ -30,4 +34,66 @@ const app = StackNavigator({
   }
 });
 
+Usage spinner:
+import Spinner from "react-native-loading-spinner-overlay";
+
+    this.state = {
+      loading: false
+    };
+
+<Spinner visible={this.state.loading} />
+
+when need to show spinner: this.setState({ loading: true });
+when need to hide spinner: this.setState({ loading: false });
+
+Usage voximplant:
+
+react-native link react-native-voximplant
+
+In android/src/main/AndroidManifest.xml add user permissions:
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
+  console.log("Connection successful");
+});
+
+DeviceEventEmitter.addListener("LoginSuccessful", () => {
+  console.log("Login successful ");
+});
+
+DeviceEventEmitter.addListener("LoginFailed", () => {
+  console.log("Login failed");
+});
+
+  componentDidMount() {
+    VoxImplant.SDK.connect();
+  }
+
+      const responseM = await fetch(
+      "https://api.voximplant.com/platform_api/Logon/?account_email=" +
+        Vemail +
+        "&account_password=" +
+        Vpassword
+    );
+    const jsonM = await responseM.json();
+    const api_key = jsonM.api_key;
+    const account_id = JSON.stringify(jsonM.account_id);
+    await AsyncStorage.setItem("API", api_key);
+    await AsyncStorage.setItem("ACC_ID", account_id);
+
+    VoxImplant.SDK.login(
+      usernameValue +
+        "@" +
+        appnameValue +
+        "." +
+        accnameValue +
+        ".voximplant.com",
+      passwordValue
+    );
 
