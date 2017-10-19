@@ -94,7 +94,7 @@ export default class Register extends Component {
     );
     const jsonA = await responseA.json();
     const application_id = JSON.stringify(jsonA.application_id);
-    await AsyncStorage.setItem("@Humdum:application_id", application_id);
+    await AsyncStorage.setItem("application_id", application_id);
     console.log("Application id:" + application_id);
 
     const usernameValue = email.replace(/@[^@]+$/, ""); // get username from email

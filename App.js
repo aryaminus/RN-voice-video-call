@@ -48,13 +48,21 @@ class Home extends Component<{}> {
     super();
     VoxImplant.SDK.closeConnection();
     this.state = {
-      loading: true,
-      emailA: false
+      page: "connection",
+      emailA: false,
+      email: "",
+      usernameValue: "",
+      passwordValue: ""
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     _this = this;
+    AsyncStorage.getItem("email").then(item => {
+      if (item) {
+        this.setState({ emailA: true });
+      }
+    });
     VoxImplant.SDK.connect();
   }
 
@@ -66,8 +74,14 @@ class Home extends Component<{}> {
     header: null
   };
 
-  async checkuser() {
-    try {
+  /*async checkuser() {
+    AsyncStorage.getItem('email')
+    .then((item) => {
+         if (item) {
+          this.setState({ emailA: false });
+         }
+    });
+    /*try {
       const emailB = await AsyncStorage.getItem("email");
       if (emailB != null) {
         this.setState({ emailA: false });
@@ -77,7 +91,7 @@ class Home extends Component<{}> {
     } catch (error) {
       this.setState({ emailA: true });
     }
-  }
+}*/
 
   async VoxImplant() {
     const accnameValue = "testing";
@@ -100,8 +114,7 @@ class Home extends Component<{}> {
   }
 
   render() {
-    this.checkuser();
-    if (this.state.emailA) {
+    if (!this.state.emailA) {
       return (
         <View style={styles.container}>
           <StatusBar barStyle="light-content" backgroundColor="#16a085" />
@@ -109,7 +122,9 @@ class Home extends Component<{}> {
         </View>
       );
     }
-    this.VoxImplant();
+    if (this.state.page == "login") {
+      this.VoxImplant();
+    }
     return <Boiler navigation={this.props.navigation} />;
   }
 }
