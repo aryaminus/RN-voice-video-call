@@ -32,7 +32,7 @@ import VoxImplant from "react-native-voximplant";
 
 DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
-  this.setState({ page: "login" });
+  _this.setState({ page: "login" });
 });
 
 DeviceEventEmitter.addListener("LoginSuccessful", () => {
@@ -54,6 +54,7 @@ class Home extends Component<{}> {
   }
 
   componentDidMount() {
+    _this = this;
     VoxImplant.SDK.connect();
   }
 
