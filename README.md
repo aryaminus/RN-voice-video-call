@@ -20,12 +20,13 @@ We will be using HTTPAPI of Voximplant.
 1. Arch Linux with VS-Code, thus support focused on Android App
 2. Extensions: <a href="https://marketplace.visualstudio.com/items?itemName=vsmobile.vscode-react-native" target="_blank">React Native Tools</a> , <a href="https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux" target="_blank">React-Native Snippets</a> , <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a>
 3. Device run instead of SDK-build using <a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm" target="_blank">Vysor</a>
+4. Remove/Add Comment of the required system in Register.js : Create new Application and fetch application_id and assign user to it or assign user to all applications. **Default** is assign all
 
 ## Installation
 
 Clone the source locally:
 ```
-$ git clone https://github.com/aryaminus/RN-voice-video-call
+$ git clone https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 $ cd RN-voice-video-call
 ```
 
@@ -49,6 +50,12 @@ Follow Code.txt and <a href="https://youtu.be/-sweQ2HzjrA" target="_blank">Youtu
 1. <a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
 2. <a href="https://github.com/voximplant/react-native-voximplant" target="_blank">react-native-voximplant</a>
 3. <a href="https://github.com/joinspontaneous/react-native-loading-spinner-overlay" target="_blank">react-native-loading-spinner-overlay</a>
+
+## Additional Links:
+1. <a href="http://voximplant.com/docs/references/mobilesdk/ios/Protocols/VoxImplantDelegate.html" target="_blank">VoxImplantDelegate</a>
+2. <a href="https://voximplant.com/docs/references/httpapi/" target="_blank">HTTP API</a>
+3. <a href="https://manage.voximplant.com" target="_blank">Control Panel</a>
+4. <a href="https://github.com/voximplant/react-native-demo" target="_blank">Voximplant official demo app</a>
 
 
 ### Installation

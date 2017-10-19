@@ -84,6 +84,9 @@ export default class Register extends Component {
 
     //fetch response from voximplant with account and app id  to get application id
     //use once only for single application or for different applications
+   
+    //for new app create
+    /*
     const appname = "humdum";
     const responseA = await fetch(
       "https://api.voximplant.com/platform_api/AddApplication/?account_id=" +
@@ -129,7 +132,39 @@ export default class Register extends Component {
     const jsonB = await responseB.json();
     const result = JSON.stringify(jsonB.result);
     console.log(result);
+*/
 
+    //for assign user to ALL application
+    const usernameValue = email.replace(/@[^@]+$/, "");
+    const response = await fetch(
+      "https://api.voximplant.com/platform_api/AddUser/?account_id=" +
+        account_id +
+        "&api_key=" +
+        api_key +
+        "&user_name=" +
+        usernameValue +
+        "&user_display_name=" +
+        name +
+        "&user_password=" +
+        password
+    );
+    const json = await response.json();
+    const user_id = JSON.stringify(json.user_id);
+    await AsyncStorage.setItem("user_id", user_id);
+
+    const responseB = await fetch(
+      "https://api.voximplant.com/platform_api/BindUser/?account_id=" +
+        account_id +
+        "&api_key=" +
+        api_key +
+        "&user_id=" +
+        user_id +
+        "&application_id=all"
+    );
+    const jsonB = await responseB.json();
+    const result = JSON.stringify(jsonB.result);
+    console.log(result);
+    
     const accnameValue = "testing";
     const appnameValue = "testing";
     const passwordValue = password;
