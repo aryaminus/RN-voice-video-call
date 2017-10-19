@@ -13,7 +13,7 @@ Next, we store the login values or the new user create values locally using Asyn
 
 We will be using HTTPAPI of Voximplant.
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://youtu.be/-sweQ2HzjrA)
+[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://youtu.be/WLPueAdj52k)
 
 **Note:**
 
@@ -45,7 +45,7 @@ react-native link
 then press F1 or Fn+F1 and React Native:Run Android on Device 
 
 **Else**
-Follow Code.txt and <a href="https://youtu.be/-sweQ2HzjrA" target="_blank">Youtube</a>
+Follow Code.txt and <a href="https://youtu.be/WLPueAdj52k" target="_blank">Youtube</a>
 
 ## Packages:
 1. <a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
