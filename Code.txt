@@ -1,0 +1,33 @@
+react-native init RNVideoVoiceCall
+cd RNVideoVoiceCall
+npm install
+
+Package:
+https://reactnavigation.org/docs/intro/
+
+
+npm install --save react-navigation
+
+Usage:
+import { StackNavigator } from "react-navigation";
+
+and
+
+return (
+          <View>
+            <Boiler navigation={this.props.navigation} />
+          </View>
+);
+
+and
+
+const app = StackNavigator({
+  Boiler: {
+    screen: HomeScreen,
+    navigationOptions: {
+      title: "Boiler"
+    }
+  }
+});
+
+
