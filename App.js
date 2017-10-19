@@ -125,7 +125,12 @@ class Home extends Component<{}> {
     if (this.state.page == "login") {
       this.VoxImplant();
     }
-    return <Boiler navigation={this.props.navigation} />;
+    return (
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor="#16a085" />
+        <Boiler navigation={this.props.navigation} />
+      </View>
+    );
   }
 }
 
