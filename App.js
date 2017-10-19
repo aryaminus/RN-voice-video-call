@@ -49,7 +49,7 @@ class Home extends Component<{}> {
     VoxImplant.SDK.closeConnection();
     this.state = {
       loading: true,
-      emailA: ""
+      emailA: false
     };
   }
 
@@ -66,8 +66,16 @@ class Home extends Component<{}> {
   };
 
   async checkuser() {
-    const emailB = await AsyncStorage.getItem("email");
-    this.setState({ emailA: emailB });
+    try {
+      const emailB = await AsyncStorage.getItem("email");
+      if (emailB != null) {
+        this.setState({ emailA: false });
+      } else {
+        this.setState({ emailA: true });
+      }
+    } catch (error) {
+      this.setState({ emailA: true });
+    }
   }
 
   async VoxImplant() {
@@ -92,7 +100,7 @@ class Home extends Component<{}> {
 
   render() {
     this.checkuser();
-    if (this.state.emailA === "") {
+    if (this.state.emailA) {
       return (
         <View style={styles.container}>
           <StatusBar barStyle="light-content" backgroundColor="#16a085" />
