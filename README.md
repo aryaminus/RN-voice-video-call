@@ -1,6 +1,6 @@
 # RNVideoVoiceCall
 
-**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice or video calling peer to peer or conference in modern apps using Voximplant.
+**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice call along with video call for both peer to peer or conference using Voximplant for react native
 
 In this branch, we will be focusing on The Backend part using fetching of response and taking the json elements where we will setup Voximplant to login with the main user account, create a child user or login with the already assigned user , assign the user to certain new or previous application and enter the view.
 
