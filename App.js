@@ -30,13 +30,16 @@ import VoxImplant from "react-native-voximplant";
     'Shake or press menu button for dev menu',
 });*/
 
+var _this, uaDisplayName;
+
 DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
   _this.setState({ page: "login" });
 });
 
 DeviceEventEmitter.addListener("LoginSuccessful", () => {
-  console.log("Login successful ");
+  uaDisplayName = obj.displayName;
+  console.log("Login successful " + uaDisplayName);
 });
 
 DeviceEventEmitter.addListener("LoginFailed", () => {
@@ -128,13 +131,13 @@ class Home extends Component<{}> {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor="#16a085" />
-        <Boiler navigation={this.props.navigation} />
+        <Boiler uaDisplayName={uaDisplayName} navigation={this.props.navigation} />
       </View>
     );
   }
 }
 
-export default (App = StackNavigator({
+export default App = StackNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
@@ -165,7 +168,7 @@ export default (App = StackNavigator({
       title: "Boiler"
     }
   }
-}));
+});
 
 const styles = StyleSheet.create({
   container: {
