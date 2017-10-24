@@ -2,7 +2,10 @@
 
 **RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice call along with video call for both peer to peer or conference using Voximplant for react native
 
-In this branch, we will be focusing on The Backend part using fetching of response and taking the json elements where we will setup Voximplant to login with the main user account, create a child user or login with the already assigned user , assign the user to certain new or previous application and enter the view.
+In this branch, we will be focusing on Uesr Side where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
+
+The Backend part can be refered here:
+https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 
 **Note:**
 
@@ -28,7 +31,7 @@ Clone the source locally:
 ```
 $ git clone https://github.com/aryaminus/RN-voice-video-call/
 $ cd RN-voice-video-call
-$ git checkout HttpApiSetup
+$ git checkout UserView
 ```
 
 **Start the application in development mode**
@@ -60,7 +63,7 @@ Follow Code.txt and <a href="https://youtu.be/WLPueAdj52k" target="_blank">Youtu
 
 
 ### Installation
-Follow Code.txt and Manual.md and Working.png
+Follow Code.txt and Manual.md and UserViewWorkingWorking.png(inside /app/images)
 
 ![Working demo](https://i.imgur.com/Xmp5bJi.png)
 
