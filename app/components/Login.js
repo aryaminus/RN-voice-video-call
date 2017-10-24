@@ -56,8 +56,8 @@ export default class Login extends Component {
     console.log(password);
     await AsyncStorage.setItem("email", email);
     await AsyncStorage.setItem("password", password);
-    const accnameValue = "testing";
-    const appnameValue = "testing";
+    const accnameValue = "aryaminus";
+    const appnameValue = "humdum";
     const usernameValue = email.replace(/@[^@]+$/, ""); //extract username from email
     console.log(usernameValue);
     const passwordValue = password;

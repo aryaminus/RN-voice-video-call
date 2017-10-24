@@ -486,7 +486,7 @@ export default class Boiler extends Component {
           <Text
             style={{ color: "#FFFFFF", alignSelf: "center", marginBottom: 10 }}
           >
-            Logged in as {this.props.uaDisplayName}
+            Logged in
           </Text>
         </View>
         {videoPanel}

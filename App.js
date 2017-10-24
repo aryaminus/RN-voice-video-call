@@ -30,7 +30,7 @@ import VoxImplant from "react-native-voximplant";
     'Shake or press menu button for dev menu',
 });*/
 
-var _this, uaDisplayName;
+var _this;
 
 DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
   console.log("Connection successful");
@@ -38,8 +38,7 @@ DeviceEventEmitter.addListener("ConnectionSuccessful", () => {
 });
 
 DeviceEventEmitter.addListener("LoginSuccessful", () => {
-  uaDisplayName = obj.displayName;
-  console.log("Login successful " + uaDisplayName);
+  console.log("Login successful ");
 });
 
 DeviceEventEmitter.addListener("LoginFailed", () => {
@@ -97,8 +96,8 @@ class Home extends Component<{}> {
 }*/
 
   async VoxImplant() {
-    const accnameValue = "testing";
-    const appnameValue = "testing";
+    const accnameValue = "aryaminus";
+    const appnameValue = "humdum";
     const email = await AsyncStorage.getItem("email");
     const usernameValue = email.replace(/@[^@]+$/, "");
     const passwordValue = await AsyncStorage.getItem("password");
@@ -131,7 +130,7 @@ class Home extends Component<{}> {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor="#16a085" />
-        <Boiler uaDisplayName={uaDisplayName} navigation={this.props.navigation} />
+        <Boiler navigation={this.props.navigation} />
       </View>
     );
   }
