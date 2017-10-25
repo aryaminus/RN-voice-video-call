@@ -229,7 +229,7 @@ export default class Boiler extends Component {
   toggleVideo() {
     if (!sendVideo) sendVideo = true;
     else sendVideo = false;
-    VoxImplantSDK.SDK.sendVideo(sendVideo);
+    VoxImplant.SDK.sendVideo(sendVideo);
   }
 
   switchCamera() {
@@ -367,14 +367,6 @@ export default class Boiler extends Component {
               marginBottom: 20
             }}
           >
-            <ToggleButton
-              onPress={() => this.toggleVideo()}
-              name="mic-mute"
-              style={[styles.icon, styles.keypad_icon]}
-              size={30}
-              color="#2B2B2B"
-              pressed={sendVideo}
-            />
             <ToggleButton
               onPress={() => this.switchMute()}
               name="mic-mute"
@@ -634,15 +626,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-around"
   },
   icon: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     justifyContent: "center",
     borderWidth: 1,
     borderRadius: 35
   },
   phone_icon: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     alignSelf: "center",
     borderColor: "#4CD964",
     backgroundColor: "#4CD964",
