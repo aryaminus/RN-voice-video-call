@@ -573,7 +573,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000"
   },
   videopanel: {
-    marginBottom: 20
+    marginBottom: 15
   },
   numberinput: {
     margin: 10
