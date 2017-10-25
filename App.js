@@ -102,7 +102,7 @@ class Home extends Component<{}> {
     const usernameValue = email.replace(/@[^@]+$/, "");
     const passwordValue = await AsyncStorage.getItem("password");
     console.log(email);
-    console.log(passwordValue);
+    //console.log(passwordValue);
     VoxImplant.SDK.login(
       usernameValue +
         "@" +

@@ -1,22 +1,25 @@
 # RNVideoVoiceCall
 
-**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice call along with video call for both peer to peer or conference using Voximplant for react native
+**RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice call along with video call for both peer to peer or conference using Voximplant for react native.
 
-In this branch, we will be focusing on Uesr Side where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
+In this branch, we will be focusing on User Side where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle which when true shows the Remote View and Self View. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
 
 The Backend part can be refered here:
 https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 
 **Note:**
 
-1. The response's JSON maybe required to be stringified, so make usre you use it when formatting
+1. The response's JSON maybe required to be stringified, so make sure you use it when formatting
 2. As the react-native-voximplant package sends responses as the state of the account is changed, we use DeviceEventEmitter for listening and changing certain variables
+3. The icons are setup as createIconSet, you can change it by change the FontFamily in android/app/src/main/assets/fonts and custom.ttf
+4. Further layout can be changed within Stylesheet if your device is not rendering the view properly
+
 
 Next, we store the login values or the new user create values locally using Async Storage and then use it next time the user opens the app so that s/he does not have to login each time the app is opened.
 
 We will be using HTTPAPI of Voximplant.
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://youtu.be/WLPueAdj52k)
+[![RNVideoVoiceCall demo](https://i.imgur.com/Iruu0Eq.gif)](https://youtu.be/WLPueAdj52k)
 
 **Note:**
 
@@ -54,6 +57,9 @@ Follow Code.txt and <a href="https://youtu.be/WLPueAdj52k" target="_blank">Youtu
 1. <a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
 2. <a href="https://github.com/voximplant/react-native-voximplant" target="_blank">react-native-voximplant</a>
 3. <a href="https://github.com/joinspontaneous/react-native-loading-spinner-overlay" target="_blank">react-native-loading-spinner-overlay</a>
+4. <a href="https://github.com/oblador/react-native-vector-icons" target="_blank">react-native-vector-icons</a>
+5. <a href="https://github.com/ide/react-native-button" target="_blank">react-native-button</a>
+6. <a href="https://github.com/benpptung/react-addons-update" target="_blank">react-addons-update</a>
 
 ## Additional Links:
 1. <a href="http://voximplant.com/docs/references/mobilesdk/ios/Protocols/VoxImplantDelegate.html" target="_blank">VoxImplantDelegate</a>
@@ -63,9 +69,9 @@ Follow Code.txt and <a href="https://youtu.be/WLPueAdj52k" target="_blank">Youtu
 
 
 ### Installation
-Follow Code.txt and Manual.md and UserViewWorkingWorking.png(inside /app/images)
+Follow Code.txt and Manual.md and UserViewWorking.png(inside /app/images)
 
-![Working demo](https://i.imgur.com/Xmp5bJi.png)
+![Working demo](https://i.imgur.com/b8k9jEs.png)
 
 ## Contributing
 
