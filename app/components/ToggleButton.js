@@ -47,7 +47,7 @@ class ToggleButton extends React.Component {
       color = this.props.color;
     }
     return (
-      <View style={{ width: 70, height: 70 }}>
+      <View style={{ width: 55, height: 55 }}>
         <Icon.Button
           name={this.props.name}
           style={[style, { alignSelf: "center" }]}

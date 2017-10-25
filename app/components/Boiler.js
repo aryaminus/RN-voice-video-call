@@ -290,7 +290,7 @@ export default class Boiler extends Component {
           <Icon.Button
             name="flip-camera"
             style={[styles.icon, styles.keypad_icon, { alignSelf: "center" }]}
-            size={25}
+            size={13}
             color="#2B2B2B"
             backgroundColor="transparent"
             onPress={() => this.switchCamera()}
@@ -341,7 +341,7 @@ export default class Boiler extends Component {
           <Icon.Button
             name="phone"
             style={[styles.icon, styles.phone_icon]}
-            size={30}
+            size={20}
             backgroundColor="transparent"
             onPress={e => this.makeCall(e)}
             iconStyle={{ marginLeft: 7 }}
@@ -371,7 +371,7 @@ export default class Boiler extends Component {
               onPress={() => this.switchMute()}
               name="mic-mute"
               style={[styles.icon, styles.keypad_icon]}
-              size={30}
+              size={15}
               color="#2B2B2B"
               pressed={micMuted}
             />
@@ -383,7 +383,7 @@ export default class Boiler extends Component {
                   styles.keypad_icon,
                   { alignSelf: "center" }
                 ]}
-                size={25}
+                size={15}
                 color="#2B2B2B"
                 backgroundColor="transparent"
                 onPress={() => this.switchKeypad()}
@@ -395,7 +395,7 @@ export default class Boiler extends Component {
               onPress={() => this.switchSpeaker()}
               name="speaker"
               style={[styles.icon, styles.keypad_icon]}
-              size={30}
+              size={20}
               color="#2B2B2B"
               pressed={loudSpeaker}
             />
@@ -406,11 +406,11 @@ export default class Boiler extends Component {
               <Icon.Button
                 name="hangup"
                 style={[styles.icon, styles.cancel_icon]}
-                size={12}
+                size={5}
                 color="#FFFFFF"
                 backgroundColor="transparent"
                 onPress={e => this.cancelCall(e)}
-                iconStyle={{ marginLeft: 9 }}
+                iconStyle={{ marginLeft: 8 }}
               />
             </View>
           </View>
@@ -429,11 +429,11 @@ export default class Boiler extends Component {
             <Icon.Button
               name="hangup"
               style={[styles.icon, styles.cancel_icon]}
-              size={12}
+              size={5}
               color="#FFFFFF"
               backgroundColor="transparent"
               onPress={e => this.cancelCall(e)}
-              iconStyle={{ marginLeft: 9 }}
+              iconStyle={{ marginLeft: 8 }}
             />
           </View>
         </View>
@@ -556,7 +556,7 @@ const styles = StyleSheet.create({
   selfview: {
     position: "relative",
     marginTop: -80,
-    left: 110,
+    left: 140,
     width: 80,
     height: 60,
     borderColor: "#007AFF",
@@ -565,7 +565,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000"
   },
   remotevideo: {
-    width: 380,
+    width: 400,
     height: 430,
     borderColor: "#FF1300",
     borderWidth: 1,
@@ -573,7 +573,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000"
   },
   videopanel: {
-    marginTop: 10,
     marginBottom: 20
   },
   numberinput: {
@@ -589,18 +588,18 @@ const styles = StyleSheet.create({
     borderColor: "#4CD964",
     borderWidth: 1,
     color: "#4CD964",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 10
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 5
   },
   cancelbutton: {
     alignSelf: "center",
     borderColor: "#FF3B30",
     borderWidth: 1,
     color: "#FF3B30",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 10
+    paddingVertical: 2,
+    paddingHorizontal: 2,
+    borderRadius: 2
   },
   modalButtons: {
     marginTop: 10,
@@ -626,15 +625,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-around"
   },
   icon: {
-    width: 50,
+    width: 55,
     height: 50,
     justifyContent: "center",
     borderWidth: 1,
-    borderRadius: 35
+    borderRadius: 20
   },
   phone_icon: {
-    width: 50,
-    height: 50,
+    width: 55,
+    height: 55,
     alignSelf: "center",
     borderColor: "#4CD964",
     backgroundColor: "#4CD964",
@@ -647,6 +646,8 @@ const styles = StyleSheet.create({
     borderWidth: 0.5
   },
   cancel_icon: {
+    width: 55,
+    height: 55,
     alignSelf: "center",
     borderColor: "#FF3B30",
     backgroundColor: "#FF3B30"
