@@ -304,7 +304,7 @@ export default class Boiler extends Component {
         <TextInput
           style={[styles.forminput, styles.numberinput]}
           onChangeText={e => this.updateNumber(e)}
-          placeholder="Number to call"
+          placeholder="User to call"
           initialValue={number}
           onSubmitEditing={e => this.onSubmit(e)}
           ref={component => (this._thisNumber = component)}
@@ -315,9 +315,6 @@ export default class Boiler extends Component {
 
       settingsTable = (
         <View style={{ flex: 1, justifyContent: "flex-end" }}>
-          <Text style={{ alignSelf: "center", marginTop: 15 }}>
-            Settings (will be applied to the next call)
-          </Text>
           <View style={styles.settings_table}>
             <View style={styles.settings_switch}>
               <Text style={styles.settings_label}>Peer-to-peer</Text>
@@ -478,7 +475,7 @@ export default class Boiler extends Component {
       <View style={styles.useragent}>
         <View
           style={{
-            backgroundColor: "#007AFF",
+            backgroundColor: "#16a085",
             height: 64,
             justifyContent: "flex-end"
           }}
@@ -576,8 +573,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000"
   },
   remotevideo: {
-    width: 320,
-    height: 240,
+    width: 380,
+    height: 430,
     borderColor: "#FF1300",
     borderWidth: 1,
     alignSelf: "center",
