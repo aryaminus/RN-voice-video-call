@@ -39,16 +39,19 @@
 All events are described at [http://voximplant.com/docs/references/mobilesdk/ios/Protocols/VoxImplantDelegate.html](http://voximplant.com/docs/references/mobilesdk/ios/Protocols/VoxImplantDelegate.html) 
 
 ### react-native-button
-npm install react-native-button --save
-react-native link
+`$ npm install react-native-button --save`
+
+`$ react-native link`
 
 ### react-addons-update
-npm install react-addons-update --save
-react-native link
+`$ npm install react-addons-update --save`
+
+`$ react-native link`
 
 ### react-native-vector-icons
  Run: 
  `$ npm install react-native-vector-icons --save`
+
  `$ react-native link react-native-vector-icons`
 
 ### Android
