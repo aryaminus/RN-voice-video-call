@@ -14,7 +14,7 @@ https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 
 [![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
 
-### Todos
+## Todos
 
 - [ ] Fullscreen RemoteView for VideoCall
 - [ ] Integrating Messaging 
