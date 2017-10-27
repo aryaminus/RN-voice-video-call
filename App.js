@@ -96,8 +96,8 @@ class Home extends Component<{}> {
 }*/
 
   async VoxImplant() {
-    const accnameValue = "aryaminus";
-    const appnameValue = "humdum";
+    const accnameValue = "testing";
+    const appnameValue = "testing";
     const email = await AsyncStorage.getItem("email");
     const usernameValue = email.replace(/@[^@]+$/, "");
     const passwordValue = await AsyncStorage.getItem("password");
