@@ -2,10 +2,26 @@
 
 **RNVideoVoiceCall** is the 4th session build for showing the implementation of Signin and Signup screen to login or create user for voice call along with video call for both peer to peer or conference using Voximplant for react native.
 
-In this branch, we will be focusing on User Side where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle which when true shows the Remote View and Self View. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
+In this main branch, we will be focusing on UserSide branch properties to be upgraded which can be referred here:
+https://github.com/aryaminus/RN-voice-video-call/tree/UserView
+
+[![RNVideoVoiceCall demo](https://i.imgur.com/Iruu0Eq.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
+
+The main GUI is working as expected where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle which when true shows the Remote View and Self View. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
 
 The Backend part can be refered here:
 https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
+
+[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
+
+### Todos
+
+- [ ] Fullscreen RemoteView for VideoCall
+- [ ] Integrating Messaging 
+- [ ] Hiding the main account credentials in Register.js
+- [ ] Navigation to Boiler only after the SDK Login is complete from server
+
+PRs are always welcome
 
 **Note:**
 
@@ -18,8 +34,6 @@ https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 Next, we store the login values or the new user create values locally using Async Storage and then use it next time the user opens the app so that s/he does not have to login each time the app is opened.
 
 We will be using HTTPAPI of Voximplant.
-
-[![RNVideoVoiceCall demo](https://i.imgur.com/Iruu0Eq.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
 
 **Note:**
 
@@ -69,7 +83,7 @@ Follow Code.txt and <a href="https://www.youtube.com/playlist?list=PLM5nyCrpk9va
 
 
 ### Installation
-Follow Code.txt and Manual.md and UserViewWorking.png(inside /app/images)
+Follow Code.txt, Manual.md and UserViewWorking.png and ServerWorking.png(inside /app/images)
 
 ![Working demo](https://i.imgur.com/b8k9jEs.png)
 
