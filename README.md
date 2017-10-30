@@ -14,7 +14,7 @@ The Backend part can be refered here:
 
 https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/watch?v=qJUI6mH1IlY&list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy&index=5)
+[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/watch?v=WLPueAdj52k&list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy&index=1)
 
 ## Todos
 
@@ -67,7 +67,7 @@ react-native link
 then press F1 or Fn+F1 and React Native:Run Android on Device 
 
 **Else**
-Follow Code.txt and <a href="https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy" target="_blank">Youtube</a>
+Follow Code.txt and <a href="https://www.youtube.com/watch?v=WLPueAdj52k&list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy&index=5" target="_blank">Youtube</a>
 
 ## Packages:
 1. <a href="https://reactnavigation.org/docs/intro/" target="_blank">react-navigation</a>
