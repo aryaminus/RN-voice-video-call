@@ -6,7 +6,7 @@ In this main branch, we will be focusing on UserSide branch from which certain p
 
 https://github.com/aryaminus/RN-voice-video-call/tree/UserView
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/Iruu0Eq.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
+[![RNVideoVoiceCall demo](https://i.imgur.com/Iruu0Eq.gif)](https://www.youtube.com/watch?v=qJUI6mH1IlY&list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy&index=5)
 
 The main GUI is working as expected where the user after logging in is given a text field to enter the caller user id with toogle option to Peer-to-peer and Video toogle which when true shows the Remote View and Self View. On pressing Call icon the receiver get option to accept or reject the call and then on accept the user and receiver is shown option to toogle speaker, video, mute, keypad & hang-up. On Call fail and reject, alert is shown to the user.
 
@@ -14,7 +14,7 @@ The Backend part can be refered here:
 
 https://github.com/aryaminus/RN-voice-video-call/tree/HttpApiSetup
 
-[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/playlist?list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy)
+[![RNVideoVoiceCall demo](https://i.imgur.com/mnsdKR6.gif)](https://www.youtube.com/watch?v=qJUI6mH1IlY&list=PLM5nyCrpk9vaYCZRjGg1TEU4cQZMYZqvy&index=5)
 
 ## Todos
 
