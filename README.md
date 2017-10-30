@@ -50,7 +50,6 @@ Clone the source locally:
 ```
 $ git clone https://github.com/aryaminus/RN-voice-video-call/
 $ cd RN-voice-video-call
-$ git checkout UserView
 ```
 
 **Start the application in development mode**
