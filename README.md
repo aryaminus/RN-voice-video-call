@@ -56,7 +56,7 @@ $ cd RN-voice-video-call
 ```
 npm install
 react-native link
-react-native run android
+react-native run-android
 ```
 or for VS-Code:
 ```
